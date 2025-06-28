@@ -14,7 +14,7 @@ def get_book_text(book):
 def main():
     filepath = "books/frankenstein.txt"
     text = get_book_text(filepath)
-    
+
     if text.isalpha():
         alpha = text
         print(alpha)
@@ -25,19 +25,16 @@ def main():
     
     listed = dict_list(letters)
 
-
-
     listed.sort(reverse = True, key = sort_on)
     print("============ BOOKBOT ============")
-    print("Analyzing book found at", filepath)
+    print(f"Analyzing book found at {filepath}")
     print("----------- Word Count ----------")
-    print(f"Found ",words, f"total words")
+    print(f"Found {words} total words")
     print("--------- Character Count -------")
     for dicts in listed:
         get_alphas = dicts["char"]
-        
         if get_alphas.isalpha() == True:
-            print(dicts["char"], ":", dicts["num"])
+            print(f"{dicts["char"]}: {dicts["num"]}")
     print("============= END ===============")
 
 main()
