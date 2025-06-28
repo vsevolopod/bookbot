@@ -25,17 +25,11 @@ def dict_list(chars):
         num_dict["num"] = l_vals[i]
         full_dict = char_dict | num_dict
         sort_list.append(full_dict)
-    #sort_list.sort(reverse = True, key = sort_on)   
+
     return sort_list
 
 def sort_on(items):
     return items["num"]
-        
 
-    #print (l_keys[1])
-    #print (l_vals[1])
-
-
-    #print (f" silly"  , f"goosery")
 
      
