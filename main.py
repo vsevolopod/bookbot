@@ -15,7 +15,6 @@ except Exception:
 def get_book_text(book):
     with open(book) as f:
         file_contents = f.read()
-        #print("Contents inside:", file_contents)
         return file_contents
 
 def main():
